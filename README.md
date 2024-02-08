@@ -1,7 +1,7 @@
 # CSV Sum Calculator
 This is a simple CSV Sum Calculator application implemented in C# using WinForms. The purpose of this application is to allow users to select a CSV (Comma Separated Values) file and calculate the sum of all numbers contained within it. It provides a user interface where users can click a button to select a CSV file, and upon selection, the application calculates the sum of all numbers in the file and displays the last ten digits of the sum in a text box.
 
-##How it Works
+## How it Works
 1. **Selecting a CSV File**: Users can click the "Select CSV File" button to open a file dialog where they can navigate to and select a CSV file.
 
 2. **Calculating the Sum**: Once a CSV file is selected, the application reads all lines from the file, splits each line by comma, and sums up all the numbers found in the file.

@@ -59,33 +59,33 @@ This file contains the main entry point for the application.
 
 # Reflection
 
-1. **Extensibility**:  
-   a) This program could be written to read from a database instead of a CSV file by implementing a separate class for data access. 
-   b) Efficiently processes large numbers by utilizing the BigInteger data type allowing it to handle a lot of data with large datasets.
-   c) Processes comma-separated values (CSV) files without single quotes around numbers and parses to trim surrounding single quotes before parsing numbers as BigIntegers without needing modifications.
+1. **Extensibility**:  <br>
+   a) This program could be written to read from a database instead of a CSV file by implementing a separate class for data access. <br>
+   b) Efficiently processes large numbers by utilizing the BigInteger data type allowing it to handle a lot of data with large datasets. <br>
+   c) Processes comma-separated values (CSV) files without single quotes around numbers and parses to trim surrounding single quotes before parsing numbers as BigIntegers without needing modifications. <br>
 
-2. **Readability**: 
+2. **Readability**: <br>
    a) I believe this code is clean and easy to read, but just in case, I have added comments and explanations for clarity.
 
-3. **Efficiency**: 
+3. **Efficiency**: <br>
    a) The code is efficient for its purpose but could be enhanced for performance requirements such as optimizing the algorithm.
 
-4. **How could this be made faster**? 
+4. **How could this be made faster**? <br>
    a) To improve the program's speed I could use a different file reader such as Streamreader to save memory usage and profile the program using performance profiling tools to identify hotspots and areas for optimization.
 
-5. **Does it work with negatives**?
+5. **Does it work with negatives**? <br>
    a) BigInteger data type was used for sum calculation and is capable of handling negative numbers.
 
-6. **Can this cause problems for a very large number of loads**?
+6. **Can this cause problems for a very large number of loads**? <br>
    a) Using File.ReadAllLines() to load the entire CSV file into memory, may encounter issues with very large files due to memory constraints and performance degradation. Streaming reading should be used to optimize efficiency.
 
-7. **Does the memory usage of your application grow over time? Could this be prevented**?
+7. **Does the memory usage of your application grow over time? Could this be prevented**? <br>
   a) In the current implementation, the application's memory usage may increase over time when processing numerous large CSV files or repeatedly handling sizable datasets without releasing resources, which can lead to memory leaks. Strategies such as disposal of resources and garbage collection optimization should be used to prevent this.
 
-8. **Are we processing unnecessary information**?
+8. **Are we processing unnecessary information**? <br>
   a) The program currently reads and parses the entire CSV file, processing every line even if some lines do not contain relevant information. This issue can be resolved by modifying the parsing logic to skip irrelevant information.
 
-9. **What kinds of input would destroy your program? Should it not crash? Does it crash gracefully**?
-  a)This program handles invalid CSV formats and invalid inputs by implementing error handling and validation checks to prevent parsing errors. 
-  b)To solve performance issues or crashes caused by large input files, use a StreamReader to process data.
-  c)Implementing data validation checks to detect and handle invalid data values should prevent unexpected crashes.
+9. **What kinds of input would destroy your program? Should it not crash? Does it crash gracefully**? <br>
+  a) This program handles invalid CSV formats and invalid inputs by implementing error handling and validation checks to prevent parsing errors. <br>
+  b) To solve performance issues or crashes caused by large input files, use a StreamReader to process data. <br>
+  c) Implementing data validation checks to detect and handle invalid data values should prevent unexpected crashes. <br>

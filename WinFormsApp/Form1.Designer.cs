@@ -35,6 +35,7 @@
         {
             ResultTextBox = new TextBox();
             SelectFileButton = new Button();
+            //Prevent unnecessary layout updates while controls are being added
             SuspendLayout();
             // 
             // ResultTextBox
@@ -62,7 +63,9 @@
             Controls.Add(SelectFileButton);
             Name = "CSV Sum Calculator";
             Text = "CSV Sum Calculator";
+            //Resume layout logic without performing layout operation right away
             ResumeLayout(false);
+            //Execute the pending layout requests for the form and its children
             PerformLayout();
         }
 

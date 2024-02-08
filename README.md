@@ -1,3 +1,18 @@
+# CSV Sum Calculator
+This is a simple CSV Sum Calculator application implemented in C# using WinForms. The purpose of this application is to allow users to select a CSV (Comma Separated Values) file and calculate the sum of all numbers contained within it. It provides a user interface where users can click a button to select a CSV file, and upon selection, the application calculates the sum of all numbers in the file and displays the last ten digits of the sum in a text box.
+
+##How it Works
+1. **Selecting a CSV File**: Users can click the "Select CSV File" button to open a file dialog where they can navigate to and select a CSV file.
+
+2. **Calculating the Sum**: Once a CSV file is selected, the application reads all lines from the file, splits each line by comma, and sums up all the numbers found in the file.
+
+3. **Displaying the Result**: After calculating the sum, the application displays the last ten digits of the sum in the text box provided.
+
+# Features and Code Overview
+- Ability to handle large numbers using the BigInteger data type.
+- Error handling for invalid numbers encountered in the CSV file.
+- GUI for user interaction, making it easy to select files and view results.
+
 ## Form1.cs
 
 This file contains the main logic for the Windows Forms application.
@@ -30,8 +45,6 @@ This file contains the design and layout configuration of the `Form1`.
 
 3. **ResumeLayout(false) and PerformLayout**: Resume layout logic without performing layout operation right away. Then execute the pending layout requests for the form and its children.
            
-           
-
 ## Program.cs
 
 This file contains the main entry point for the application.
@@ -39,3 +52,7 @@ This file contains the main entry point for the application.
 ### Methods:
 
 1. **Main()**: Main entry point of the application. Initializes the application configuration and runs the `Form1`.
+
+## Dependencies
+- **System.Numerics**: for handling large integer numbers.
+- **System.Windows.Forms**: for building the GUI.

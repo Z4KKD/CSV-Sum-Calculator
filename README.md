@@ -26,6 +26,12 @@ This file contains the design and layout configuration of the `Form1`.
 
 1. **Dispose(bool disposing)**: Disposes of the form's components when the form is disposed.
 
+2. **SuspendLayout**: Prevent unnecessary layout updates while controls are being added.
+
+3. **ResumeLayout(false) and PerformLayout**: Resume layout logic without performing layout operation right away. Then execute the pending layout requests for the form and its children.
+           
+           
+
 ## Program.cs
 
 This file contains the main entry point for the application.
